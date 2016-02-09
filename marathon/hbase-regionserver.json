@@ -1,6 +1,7 @@
 {
-    "id": "hbase-master", 
-    "cmd": "su hadoop -c \"/entrypoint.sh && curl -vvv -o /hbase/conf/hdfs-site.xml http://${HDFS_NAMENODE_ENDPOINT}/conf && /hbase/bin/hbase master -Dhbase.master.info.port=$PORT0 start\"",
+    "id": "hbase-regionserver",
+    "cmd": "su hadoop -c \"/entrypoint.sh && curl -vvv -o /hbase/conf/hdfs-site.xml http://${HDFS_NAMENODE_ENDPOINT}/conf && /hbase/bin/hbase regionserver -D hbase.regionserver.port=$PORT0 -Dhbase.regionserver.info.port=$PORT1 start\"",
+ 
     "container": {
         "docker": {
             "image": "cellos/hbase:1.1.3"
@@ -18,6 +19,6 @@
     },
     "cpus": 2,
     "mem": 4000.0,
-    "instances": 1,
+    "instances": 3,
     "ports": [0, 0]
 }
