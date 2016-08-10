@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java:jdk8
+FROM anapsix/alpine-java:8_jdk
 
 ARG HBASE_DOWNLOAD_URL
 
