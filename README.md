@@ -18,3 +18,8 @@ The Marathon application manifests is used to push the environment configuration
     http://MARATHON_HOST/v2/apps\
     -d@marathon/hbase-master.json
 
+## Building
+* `env.sh` contains the variables for the HBase version that will be pulled along with the registry, etc.
+* `build.sh` builds and tags the docker container
+  * `${REPO}/hbase-${VERSION}:${TAG}`
+* `release.sh` pushes the docker container to the registry
