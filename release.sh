@@ -1,5 +1,5 @@
 #!/bin/bash
 source env.sh
-docker push "${REPO}/hbase-${VERSION}:${TAG}"
+docker push "${DOCKER_IMAGE}"
 
 
