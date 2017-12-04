@@ -24,7 +24,11 @@
 <configuration>
   <property>
     <name>hbase.rootdir</name>
-    <value>hdfs://HDFS_NAMESPACE_ID/HBASE_HDFS_ROOTDIR</value>
+    <value>HBASE_ROOTDIR</value>
+  </property>
+  <property>
+    <name>hbase.wal.dir</name>
+    <value>hdfs://HDFS_NAMESPACE_ID/HBASE_HDFS_WALDIR</value>
   </property>
 
   <property>
