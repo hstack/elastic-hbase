@@ -149,4 +149,11 @@
       <name>fs.AbstractFileSystem.adl.impl</name>
       <value>org.apache.hadoop.fs.adl.Adl</value>
   </property>
+  <property>
+    <name>hbase.hstore.compaction.kv.max</name>
+    <value>10000</value>
+    <description>The maximum number of KeyValues to read and then write in a batch when flushing or
+      compacting. Set this lower if you have big KeyValues and problems with Out Of Memory
+      Exceptions Set this higher if you have wide, small rows. </description>
+  </property>
 </configuration>
