@@ -17,5 +17,13 @@ sed -ie "s#HBASE_HDFS_WALDIR#$HBASE_HDFS_WALDIR#g" /hbase/conf/hbase-site.xml
 sed -ie "s#ZK_QUORUM#$ZK_QUORUM#g" /hbase/conf/hbase-site.xml
 sed -ie "s#HBASE_ZNODE_PARENT#$HBASE_ZNODE_PARENT#g" /hbase/conf/hbase-site.xml
 
+#Azure optional Blob settings
+sed -ie "s#AZURE_STORAGE_ACCOUNT#${AZURE_STORAGE_ACCOUNT:-'NOT_SET'}#g" /hbase/conf/hbase-site.xml
+sed -ie "s#AZURE_ACCOUNT_KEY#${AZURE_ACCOUNT_KEY:-'NOT_SET'}#g" /hbase/conf/hbase-site.xml
+#Azure optional ADLS settings
+sed -ie "s#AZURE_ADLS_TOKEN_ENDPOINT#${AZURE_ADLS_TOKEN_ENDPOINT:-'NOT_SET'}#g" /hbase/conf/hbase-site.xml
+sed -ie "s#AZURE_ADLS_CLIENT_ID#${AZURE_ADLS_CLIENT_ID:-'NOT_SET'}#g" /hbase/conf/hbase-site.xml
+sed -ie "s#AZURE_ADLS_CLIENT_SECRET#${AZURE_ADLS_CLIENT_SECRET:-'NOT_SET'}#g" /hbase/conf/hbase-site.xml
+
 exec "$@"
 
