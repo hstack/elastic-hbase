@@ -111,4 +111,38 @@
     <name>hbase.snapshot.enabled</name>
     <value>true</value>
   </property>
+  <!-- Azure Blob configuration -->
+  <property>
+    <name>fs.azure.account.key.AZURE_STORAGE_ACCOUNT.blob.core.windows.net</name>
+    <value>AZURE_ACCOUNT_KEY</value>
+  </property>
+  <property>
+    <name>fs.AbstractFileSystem.wasb.impl</name>
+    <value>org.apache.hadoop.fs.azure.Wasb</value>
+  </property>
+  <!-- Azure ADLS configuration -->
+  <property>
+        <name>dfs.adls.oauth2.access.token.provider.type</name>
+        <value>ClientCredential</value>
+  </property>
+  <property>
+      <name>dfs.adls.oauth2.refresh.url</name>
+      <value>AZURE_ADLS_TOKEN_ENDPOINT</value>
+  </property>
+  <property>
+      <name>dfs.adls.oauth2.client.id</name>
+      <value>AZURE_ADLS_CLIENT_ID</value>
+  </property>
+  <property>
+      <name>dfs.adls.oauth2.credential</name>
+      <value>AZURE_ADLS_CLIENT_SECRET</value>
+  </property>
+  <property>
+      <name>fs.adl.impl</name>
+      <value>org.apache.hadoop.fs.adl.AdlFileSystem</value>
+  </property>
+  <property>
+      <name>fs.AbstractFileSystem.adl.impl</name>
+      <value>org.apache.hadoop.fs.adl.Adl</value>
+  </property>
 </configuration>
