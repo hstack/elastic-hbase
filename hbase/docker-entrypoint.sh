@@ -17,6 +17,9 @@ sed -ie "s#HBASE_HDFS_WALDIR#$HBASE_HDFS_WALDIR#g" /hbase/conf/hbase-site.xml
 sed -ie "s#ZK_QUORUM#$ZK_QUORUM#g" /hbase/conf/hbase-site.xml
 sed -ie "s#HBASE_ZNODE_PARENT#$HBASE_ZNODE_PARENT#g" /hbase/conf/hbase-site.xml
 
+#AWS optional S3 settings
+sed -ie "s#AWS_ACCESS_KEY#${AWS_ACCESS_KEY:-'NOT_SET'}#g" /hbase/conf/hbase-site.xml
+sed -ie "s#AWS_SECRET_KEY#${AWS_SECRET_KEY:-'NOT_SET'}#g" /hbase/conf/hbase-site.xml
 #Azure optional Blob settings
 sed -ie "s#AZURE_STORAGE_ACCOUNT#${AZURE_STORAGE_ACCOUNT:-'NOT_SET'}#g" /hbase/conf/hbase-site.xml
 sed -ie "s#AZURE_ACCOUNT_KEY#${AZURE_ACCOUNT_KEY:-'NOT_SET'}#g" /hbase/conf/hbase-site.xml
