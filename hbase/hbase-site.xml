@@ -111,6 +111,15 @@
     <name>hbase.snapshot.enabled</name>
     <value>true</value>
   </property>
+  <!-- AWS S3 configuration -->
+  <property>
+    <name>fs.s3a.access.key</name>
+    <value>AWS_ACCESS_KEY</value>
+  </property>
+  <property>
+    <name>fs.s3a.secret.key</name>
+    <value>AWS_SECRET_KEY</value>
+  </property>
   <!-- Azure Blob configuration -->
   <property>
     <name>fs.azure.account.key.AZURE_STORAGE_ACCOUNT.blob.core.windows.net</name>
