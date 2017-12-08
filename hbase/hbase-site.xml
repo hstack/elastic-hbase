@@ -70,7 +70,7 @@
   <property>
     <name>hbase.hregion.memstore.block.multiplier</name>
     <value>4</value>
-    <description>Blocks updated to region when mem size > memstore times multiplier</description>
+    <description>Blocks updated to region when mem size &gt; memstore times multiplier</description>
   </property>
 
   <property>
@@ -165,4 +165,29 @@
       compacting. Set this lower if you have big KeyValues and problems with Out Of Memory
       Exceptions Set this higher if you have wide, small rows. </description>
   </property>
+  <property>
+    <name>hfile.format.version</name>
+    <value>3</value>
+  </property>
+  <property>
+    <name>hbase.hstore.compaction.min</name>
+    <value>5</value>
+  </property>
+  <property>
+    <name>hbase.storescanner.parallel.seek.enable</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>hfile.block.index.cacheonwrite</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>hfile.block.bloom.cacheonwrite</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>hbase.rs.cacheblocksonwrite</name>
+    <value>true</value>
+  </property>
+
 </configuration>
