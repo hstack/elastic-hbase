@@ -189,5 +189,13 @@
     <name>hbase.rs.cacheblocksonwrite</name>
     <value>true</value>
   </property>
+  <property>
+    <name>hbase.bucketcache.ioengine</name>
+    <value>file:/data0/bucketcache</value>
+  </property>
+   <property>
+    <name>hbase.bucketcache.size</name>
+    <value>32192</value>
+  </property>
 
 </configuration>
