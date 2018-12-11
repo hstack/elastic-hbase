@@ -22,6 +22,7 @@ RUN \
   chown -R hadoop:hadoop /hbase/lib/hadoop-lzo-0.4.20.jar && \
   chown -R hadoop:hadoop /hbase/lib/native
 
+ADD ./hbase-site-standalone.xml /
 
 # hbase.master.info.port
 ENV PORT0=16010
