@@ -1,5 +1,5 @@
 # The default version of HBase we're building the container with
-export VERSION="${VERSION:-2.1.1}"
+export VERSION="${VERSION:-2.2.0}"
 # The docker hub repository the Docker container will be taged with and pushed to
 export REPO="${REPO:-cellos}"
 # Tag the container with the short version of the current git SHA
